@@ -10,7 +10,7 @@ def add_todo():
     functions.write_todos(todos)
 
 
-st.title("My todo App")
+st.title("Naka's todo App")
 st.subheader("This is my todo app.")
 st.write("This app is to increase your productivity.")
 
@@ -22,5 +22,6 @@ for index, existing_todo in enumerate(todos):
         del st.session_state[existing_todo]
         st.rerun()
 
-st.text_input(label="The label", placeholder="Add new todo...",
-              on_change=add_todo, key="new_todo") # label_visibility=False,
+st.text_input(label="This is the label", label_visibility="hidden",
+              placeholder="Add new todo...",
+              on_change=add_todo, key="new_todo")
